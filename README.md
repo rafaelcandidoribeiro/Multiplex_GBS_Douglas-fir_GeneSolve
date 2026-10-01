@@ -1,12 +1,12 @@
 # Multiplex GBS Pipeline — Douglas-fir (GeneSolve)
 
-An end-to-end bioinformatics workflow for processing, demultiplexing, mapping, variant calling, and windowed coverage/SNP auditing for Douglas-fir (*Pseudotsuga menziesii*) Genotyping-by-Sequencing (GBS) data focused on 13 primary target scaffolds.
+An end-to-end bioinformatics workflow for processing, demultiplexing, mapping, variant calling, and windowed coverage/SNP auditing for Douglas-fir (*Pseudotsuga menziesii*) Genotyping-by-Sequencing (GBS).
 
 ---
 
-## Pipeline Architecture & Workflow
+## Pipeline Workflow
 
-The pipeline runs sequentially from raw sequence data processing down to genomic window audits. Below is the breakdown of each script included in the repository and its role in the workflow.
+The pipeline should be run sequentially from raw sequence data processing down to genomic window audits. Below is the breakdown of each script included in the repository and its role in the workflow.
 
 | Step | Script Name | Description & Purpose |
 | :--- | :--- | :--- |
