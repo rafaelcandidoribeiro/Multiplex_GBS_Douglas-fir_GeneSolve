@@ -18,7 +18,7 @@ The pipeline should be run sequentially from raw sequence data processing down t
 | **06** | `06_idxstats_report.sh` | **Alignment QC (Idxstats):** Extracts read counts mapped per scaffold to evaluate genomic distribution. |
 | **07** | `07_mark_duplicates_demux_py.sh` | **Duplicate Marking:** Uses Picard MarkDuplicates to identify and flag PCR duplicates across sorted BAMs. |
 | **08** | `08_add_read_groups_GATK_step2_demux_py.sh` | **Read Group Assignment:** Injects standard `@RG` headers into BAM files to prepare them for downstream GATK and population tools. |
-| **09** | `09_BCF_tools_SNP_caller_demux_py.sh` | **Variant Calling:** Performs multi-sample SNP calling using BCFtools across the 13 target scaffolds. |
+| **09** | `09_BCF_tools_SNP_caller_demux_py.sh` | **Variant Calling:** Performs multi-sample SNP calling using BCFtools. |
 | **10** | `10_count_depth_miss_30_50_80_DP_4_and_2_subset_list.sh` | **VCF Yield & Missingness Audit:** Evaluates SNP retention rates across missingness thresholds (30%, 50%, 80%) and depth filters (`DP >= 2` and `DP >= 4`) for a target sample list. |
 | **11a** | `11a_coverage_density_13scaffolds_AB_combined_just_reads.sh` | **Window Read Depth Audit:** Computes average read depth across 500 kbp genomic windows for each sample. |
 | **11b** | `11b_coverage_density_13scaffolds_AB_combined_just_SNPs.sh` | **Window SNP Density Audit:** Computes SNP counts across 500 kbp genomic windows (excluding windows with zero SNPs). |
