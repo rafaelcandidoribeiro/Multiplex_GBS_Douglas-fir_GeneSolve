@@ -25,20 +25,3 @@ The pipeline should be run sequentially from raw sequence data processing down t
 | **11c** | `11c_merge_audit_depth_and_SNPs.sh` | **Master Audit Integration:** Merges individual window read depth and SNP density files into unified master audit tables. |
 
 ---
-
-## Directory Structure Overview
-
-```text
-Douglas-fir_GBS_GeneSolve/
-├── GbprocesS_output/                        # Demultiplexed FASTQ files
-├── trim_retry_2_demux_py/                   # Trimmomatic outputs
-│   └── paired_fastqc/
-│       ├── sample_ids_only.txt
-│       └── mapped_to_13_scaffolds_only/
-│           ├── BAM_files/                   # Sorted, deduplicated, and indexed BAMs
-│           │   ├── audit_depth_only/        # 500 kbp read depth windows
-│           │   ├── audit_snps_only/         # 500 kbp SNP count windows
-│           │   └── master_audit_final/      # Combined audit summaries
-│           └── SNP_calling/
-│               └── final_vcf_samtools/      # Final multi-sample VCF outputs
-└── all_samples_mapping_matrix.tsv           # Comprehensive mapping summary matrix
